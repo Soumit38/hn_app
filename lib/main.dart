@@ -35,8 +35,11 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: RefreshIndicator(
-        onRefresh: () {
-          return new Future.delayed(const Duration(seconds: 1));
+        onRefresh: () async {
+          await new Future.delayed(const Duration(seconds: 1));
+          setState(() {
+            _articles.removeAt(0);
+          });
         },
         child: new ListView(
           children: _articles.map(_buildItem).toList(),
