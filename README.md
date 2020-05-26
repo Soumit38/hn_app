@@ -1,6 +1,6 @@
 # hn_app
 
-A new Flutter application.
+Hacker-news client in Flutter.
 
 ## Getting Started
 
